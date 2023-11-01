@@ -10,3 +10,46 @@ html{
     -moz-box-sizing: inherit;
     box-sizing: inherit;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .main{
+    width: 980px;
+    margin: 0 auto;   /* 置中 */
+    /* background-color: rgb(247, 245, 177); */
+  }
+.main>header{
+    text-align: center;  
+     /* 圖片置中 */
+     /* /* padding-top: 40px;
+     padding-bottom: 20px; */
+} 
+ .main>header>img.logo{
+    /* 可以清楚知道層級關係 */
+   width: 150px;
+   margin-top: 40px;
+   margin-bottom: 20px;
+  } 
+.main>nav{
+    /* background-color: yellow; */
+    /* 不確定有沒有選到可以加顏色確認 */
+    border-top: 1px solid #8a8002;
+    border-bottom: 1px solid #8a8002;
+    margin-bottom: 20px ;
+}
+.main>nav>ul>li{
+    /* background-color: aliceblue; */
+    display: inline-block;
+    width: 33%;   /*文字inline寬度不會變 inline-block 可以設定寬度*/
+    height: 70px;
+    line-height: 70px;    /*行高*/
+    text-align: center;   /*文字置中*/
+    font-size: 26px;
+    font-weight: bolder;
+
+}
+.en_text{
+    color: #8a8002;
+}
