@@ -16,13 +16,13 @@ ul {
     padding: 0;
   }
   body{
-    font-size: 50px;
+    font-size: 30px;
     
   
   }
   .main{
     width: 100%;
-    max-width: 950px;
+    max-width: 2000px;
     margin: 0 auto;   /* 置中 */
     padding: 0 15px;
     /* background-color: rgb(247, 245, 177); */
@@ -33,7 +33,7 @@ ul {
      /* /* padding-top: 40px;
      padding-bottom: 20px; */
 } 
- .main>header>img.logo{
+ .main>header img.logo{
     /* 可以清楚知道層級關係 */
    width: 150px;
    margin-top: 40px;
@@ -112,6 +112,61 @@ ul {
     color: #8a8002;
 }
 
+/* shop 的 CSS */
+.main>.shop_content>.p_cotent{
+  color: #58595B;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+.shop_content>.item_wrap{
+  border: 1px solid #8a8002;
+  font-weight: bold;
+  
+}
+.shop_content>.item_wrap>.item_row{
+  display: flex;
+  padding: 15px;
+}
+.shop_content>.item_wrap>.item_row>div{
+  flex: 1;
+}
+.shop_content>.item_wrap>.item_row>.item_right .item_title{
+  border-bottom: 1px solid #8a8002;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+.shop_content>.item_wrap>.item_row>.item_right .item_child{
+  display: flex;
+  margin-top: 10px;
+}
+.price_txt{
+  color: #8a8002;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.game_txt{
+  line-height: 40px;
+  font-size: 25px;
+}
+.buy_btn{
+  margin-left: 70px;
+  text-decoration: none;
+  background-color: #8a8002;
+  color: #FFF;
+  padding: 15px;
+  padding-top: 10px;
+  display: block;
+  border-radius: 30px;
+}
+.buy_btn:hover{
+  background-color: #000;
+}
+
+.shop_content>.item_wrap .item_left img{
+  width: 300px;
+}
+
 
 @media(max-width:992px){
   .main>nav>ul{
@@ -120,8 +175,6 @@ ul {
   .main>nav>ul>li{
     width: 100%;
   }
-  .main>nav>ul>li>.nav_child{
-    display: none;
-  }
+  
 }
 
