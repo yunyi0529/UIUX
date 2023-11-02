@@ -15,6 +15,11 @@ ul {
     margin: 0;
     padding: 0;
   }
+  body{
+    font-size: 50px;
+    
+  
+  }
   .main{
     width: 980px;
     margin: 0 auto;   /* 置中 */
@@ -31,6 +36,8 @@ ul {
    width: 150px;
    margin-top: 40px;
    margin-bottom: 20px;
+   /* display: block;
+   /* margin: 0 auto; */ /*這個方法也可以把圖置中 */
   } 
 .main>nav{
     /* background-color: yellow; */
@@ -38,18 +45,56 @@ ul {
     border-top: 1px solid #8a8002;
     border-bottom: 1px solid #8a8002;
     margin-bottom: 20px ;
+
 }
 .main>nav>ul>li{
     /* background-color: aliceblue; */
     display: inline-block;
-    width: 33%;   /*文字inline寬度不會變 inline-block 可以設定寬度*/
+    width: 32%;   /*文字inline寬度不會變 inline-block 可以設定寬度*/
     height: 70px;
     line-height: 70px;    /*行高*/
     text-align: center;   /*文字置中*/
     font-size: 26px;
     font-weight: bolder;
+}
+.main>nav>ul>li>.nav_item{
+  text-decoration: none;
+  color: #000;
+  display: block; /*所以把hover轉成塊級元素就可以擴展到body的寬度*/
+  position: relative;
 
+}
+.main>nav>ul>li>.nav_item>.nav_child {
+  display: none;
+  position: absolute;
+  width: 100%;
+  
+}
+.main>nav>ul>li>.nav_item>.nav_child a{
+  display: block;
+  background-color: #8a8002;
+  text-decoration: none;
+  color: #FFF;
+  font-size: 22px;
+  line-height: 35px;
+  padding: 10px 20px;
+  text-align: left;
+  
+}
+.main>nav>ul>li>.nav_item > .nav_child :hover a{
+  background-color: #000;
+}
+.main>nav>ul>li>.nav_item:hover{
+  background-color: #DCDDDD; /*超連結是inline所以框框不能擴展到最大*/
+ 
+}
+.main>nav>ul>li>.nav_item:hover .nav_child{
+  display: block;
+}
+.main>.content img{
+    width: 100%;
 }
 .en_text{
     color: #8a8002;
 }
+
