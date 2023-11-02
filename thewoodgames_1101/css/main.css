@@ -49,16 +49,28 @@ ul {
     margin-bottom: 20px ;
 
 }
+.main>nav>ul{
+  display: flex;
+}
 .main>nav>ul>li{
     /* background-color: aliceblue; */
-    display: inline-block;
-    width: 33.3333%;   /*文字inline寬度不會變 inline-block 可以設定寬度*/
-    margin-right: -12px;
+    /* 下面這是display inline-block 的排版方式 */
+    /* display: inline-block;
+    width: 33.3333%;   文字inline寬度不會變 inline-block 可以設定寬度
+    margin-right: -12px; 
+
+    /* 
+    這是 display flex的排版方式
+    */
+    flex: 1;
+
+
+
     height: 70px;
     line-height: 70px;    /*行高*/
     text-align: center;   /*文字置中*/
     font-size: 26px;
-    font-weight: bolder;
+    font-weight: bold;
 }
 .main>nav>ul>li>.nav_item{
   text-decoration: none;
@@ -102,8 +114,14 @@ ul {
 
 
 @media(max-width:992px){
+  .main>nav>ul{
+    flex-direction: column;
+  }
   .main>nav>ul>li{
     width: 100%;
+  }
+  .main>nav>ul>li>.nav_child{
+    display: none;
   }
 }
 
