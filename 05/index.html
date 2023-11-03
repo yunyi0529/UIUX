@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(http://www.citycreator.com/bgs/3/bg_3.gif);
+            background-repeat: repeat-x;  /* x軸 */
+        }
+        .center_point{
+            width: 10px;
+            height: 10px;
+            background-color: rgb(88, 88, 88);
+            border-radius: 50px; /*把一個正方形變圓形*/
+            /* top left right bottom 一定要position不然不會移動 */
+            top: 200px;
+            left: 50%; 
+            position: relative; /*若拿掉就會以body的（0,0）當作原點 */
+            /* 上層不管用absolute或relative都可以但通常會用relative */
+        }
+        .object1{
+            background: url(http://www.citycreator.com/blocks/3/roof_3.gif);
+            width: 50px;
+            height: 70px;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: -50px;
+            left: -100px;
+        }
+        .object2{
+            background: url(http://www.citycreator.com/blocks/3/people_15.gif);
+            width: 50px;
+            height: 70px;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 126px;
+            left: -71px;
+            z-index: 3; /*調圖層順序（有點像景深）*/
+        }
+        .object3{
+            background: url(http://www.citycreator.com/blocks/3/people_6.gif);
+            width: 50px;
+            height: 70px;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 150px;
+            left: -40px;
+            z-index: 5;
+        } 
+        .box{
+            background-color: aquamarine;
+            
+        }
+        .inner_box{
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        文字
+        <div class="inner_box"></div>
+        文字文字文字 <br>
+        文字文字文字<br>
+        文字文字<br>
+    </div>
+    <div class="center_point">
+
+        <div class="object1"></div>
+        <div class="object2"></div>
+        <div class="object3"></div>
+        
+    </div>
+</body>
+</html>
