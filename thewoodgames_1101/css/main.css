@@ -71,6 +71,7 @@ ul {
   display: block; /*所以把hover轉成塊級元素就可以擴展到body的寬度*/
   position: relative;
   width: 100%;
+  z-index: 5;
 }
 .main>nav>ul>li>.nav_item>.nav_child {
   display: none;
@@ -124,7 +125,13 @@ ul {
   display: flex;
   padding: 15px;
   gap: 15px;
+  border: 1px solid #8a8002;
 }
+.shop_content>.item_wrap>.item_row:last-child{
+  /* background-color: tomato; */
+  /* border: none; */
+}
+
 .shop_content>.item_wrap>.item_row>.item_right{
   width: 40%;
 }
@@ -151,7 +158,7 @@ ul {
 }
 .price{
   color: #8a8002;
-  font-size: 30px;
+  font-size: 35px;
 
 }
 
@@ -196,7 +203,37 @@ ul {
 /* .shop_content>.item_wrap .item_left img{
   width: 300px;
 } */
-
+footer{
+  background-color: #8a8002;
+  margin-top: 50px;
+}
+footer > .main{
+  display: flex;
+  height: 120px;
+  padding-top: 20px;
+} 
+footer > .main > ul{
+  display: flex;
+  margin-right: auto;
+  gap: 15px;
+}
+footer > .main >ul>li>a{
+  text-decoration:none;
+  color: #FFF;
+}
+footer > .main >ul>li>a:hover{
+  text-decoration: underline;
+}
+/* float 解決方案 
+footer> .main{
+  height: 120px;
+}
+footer > .main > ul{
+  float: left;
+}
+footer > .main > div{
+  float: roght;
+} */
 
 @media(max-width:992px){
   .main>nav>ul{
